@@ -6,8 +6,10 @@ import { StatusBar } from 'expo-status-bar';
 
 import  Home from './screens/homePage'
 import Login from './screens/login'
-import  coordinatorSignup from './screens/coordinatorSignup'
-import  volunteerSignup from './screens/volunteerSignup'
+import  CoordinatorSignup from './screens/coordinatorSignup'
+import  VolunteerSignup from './screens/volunteerSignup'
+import CreateTask from './screens/createTask'
+import TaskList from './screens/tasksSummary'
 
 const AppStack = createStackNavigator();
 export default function Navigator(){
@@ -15,12 +17,13 @@ export default function Navigator(){
     return (
     <NavigationContainer>
     <AppStack.Navigator screenOptions={{ headerShown: true }} >
-
     <AppStack.Screen name="Home" component={Home} />
     <AppStack.Screen name="Login" component={Login} />
-    
+    <AppStack.Screen name="CreateTask" component={CreateTask} />
+    <AppStack.Screen name="TaskList" component={TaskList} />
+    <AppStack.Screen name="CoordinatorSignup" component={CoordinatorSignup} />
+    <AppStack.Screen name="VolunteerSignup" component={VolunteerSignup} />
     </AppStack.Navigator>
-
     </NavigationContainer>
     );
 }

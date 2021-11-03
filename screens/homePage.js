@@ -16,10 +16,19 @@ export default function homePage() {
     
     const navigation = useNavigation();
 
+    function navigateToCoordinatorRegister() {
+        navigation.navigate("CoordinatorSignup");
+    }
+    
+    function navigateToVolunteerRegister() {
+        navigation.navigate("VolunteerSignup");
+    }
+
     function navigateToLogin() {
         navigation.navigate("Login");
     }
     
+
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -31,10 +40,10 @@ export default function homePage() {
             <Text style={styles.text_header}>Helping Hand</Text>
 
             <View style={styles.button}>
-            <Text style={styles.text_MidSize}>Select a Role</Text>
+            <Text style={styles.text_MidSize}>Select a Role to Register</Text>
 
                 <TouchableOpacity
-                    onPress= {()=>navigateToLogin()}
+                    onPress= {()=>navigateToVolunteerRegister()}
                     style={[styles.signIn, {
                         backgroundColor: '#FFFFFF',
                         marginTop: 15
@@ -46,7 +55,7 @@ export default function homePage() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    //onPress={}
+                    onPress= {()=>navigateToCoordinatorRegister()}
                     style={[styles.signIn, {
                         backgroundColor: '#FFFFFF',
                         marginTop: 15
@@ -58,9 +67,9 @@ export default function homePage() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                //onPress={}
+                onPress= {()=>navigateToLogin()}
                 >
-                <Text style={{color: '#FFFFFF', marginTop:15}}>Creating an Event?</Text>
+                <Text style={{color: '#FFFFFF', marginTop:15}}>Already a Member/Login</Text>
             </TouchableOpacity>
             </View>
             </View>
