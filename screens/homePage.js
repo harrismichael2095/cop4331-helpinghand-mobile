@@ -31,6 +31,9 @@ export default function homePage() {
     navigation.navigate("CoordinatorTasks");
   }
 
+  function test1() {
+    navigation.navigate("VolunteerTasks");
+  }
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <ImageBackground
@@ -95,7 +98,13 @@ export default function homePage() {
 
             <TouchableOpacity onPress={() => test()}>
               <Text style={{ color: "#FFFFFF", marginTop: 15 }}>
-                Testing testing
+                Coordinator testing (DELETE ME)
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => test1()}>
+              <Text style={{ color: "#FFFFFF", marginTop: 15 }}>
+                Volunteer testing (DELETE ME)
               </Text>
             </TouchableOpacity>
           </View>
