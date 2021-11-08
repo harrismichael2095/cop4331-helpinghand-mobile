@@ -1,7 +1,7 @@
 # cop4331-helpinghand-mobile
 mobile version using React Native
 
-images of progress fi you dont want to run the app
+images of progress if you dont want to run the app
 
 ![Screen Shot 2021-11-07 at 9 23 54 PM](https://user-images.githubusercontent.com/46226511/140674617-e80a3d98-7aaa-4b9e-b3ff-adfb3f780212.png)
 ![Screen Shot 2021-11-07 at 9 23 43 PM](https://user-images.githubusercontent.com/46226511/140674619-31b417d6-483d-4bf5-9778-1b1b4b908006.png)
