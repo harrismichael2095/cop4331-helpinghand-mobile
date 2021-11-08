@@ -8,13 +8,7 @@ import {
   TextInput,
   Platform,
   StyleSheet,
-  StatusBar,
-  Alert,
-  ImageBackground,
-  Button,
 } from "react-native";
-
-import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 export default function createTask() {
   const navigation = useNavigation();
@@ -32,13 +26,15 @@ export default function createTask() {
 
     //console log to verify inputs for debugging
     console.log(data.name, data.details, data.volunteers, data.location);
+    navigateToTaskList();
   }
 
   //function to navigate back to task list on cancel
   function navigateToTaskList() {
-    navigation.navigate("TaskList");
+    navigation.navigate("CoordinatorTasks");
   }
 
+  //setters for tex inputs
   const nameInputChange = (val) => {
     setData({
       ...data,
@@ -66,82 +62,89 @@ export default function createTask() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#009387" }}>
-    <View style={styles.header}>
-    <Text style={styles.text_header}>New Task</Text>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#009387",
+      }}
+    >
+      <View style={styles.header}>
+        <Text style={styles.text_header}>New Task</Text>
 
-      <TextInput
-        placeholder="Task Name"
-        placeholderTextColor={'#d6d6d6'}
-        style={styles.textInput}
-        autoCapitalize="none"
-        onChangeText={(val) => nameInputChange(val)}
-      />
-      <TextInput
-        placeholder="Task Details"
-        placeholderTextColor={'#d6d6d6'}
-        style={styles.textInput}
-        autoCapitalize="none"
-        onChangeText={(val) => detailsInputChange(val)}
-      />
-      <TextInput
-        placeholder="Number of Volunteers Needed"
-        placeholderTextColor={'#d6d6d6'}
-        style={styles.textInput}
-        autoCapitalize="none"
-        onChangeText={(val) => volunteersInputChange(val)}
-      />
-      <TextInput
-        placeholder="Location"
-        placeholderTextColor={'#d6d6d6'}
-        style={styles.textInput}
-        autoCapitalize="none"
-        onChangeText={(val) => locationInputChange(val)}
-      />
+        <TextInput
+          placeholder="Task Name"
+          placeholderTextColor={"#d6d6d6"}
+          style={styles.textInput}
+          autoCapitalize="none"
+          onChangeText={(val) => nameInputChange(val)}
+        />
+        <TextInput
+          placeholder="Task Details"
+          placeholderTextColor={"#d6d6d6"}
+          style={styles.textInput}
+          autoCapitalize="none"
+          onChangeText={(val) => detailsInputChange(val)}
+        />
+        <TextInput
+          placeholder="Number of Volunteers Needed"
+          placeholderTextColor={"#d6d6d6"}
+          style={styles.textInput}
+          autoCapitalize="none"
+          onChangeText={(val) => volunteersInputChange(val)}
+        />
+        <TextInput
+          placeholder="Location"
+          placeholderTextColor={"#d6d6d6"}
+          style={styles.textInput}
+          autoCapitalize="none"
+          onChangeText={(val) => locationInputChange(val)}
+        />
 
-      <TouchableOpacity
-        onPress={() => navigateToTaskList()}
-        style={[
-          styles.signIn,
-          {
-            backgroundColor: "#FFFFFF",
-            marginTop: 15,
-          },
-        ]}
-      >
-        <Text
+        <TouchableOpacity
+          onPress={() => navigateToTaskList()}
           style={[
-            styles.textSign,
+            styles.signIn,
             {
-              color: "#009387",
+              backgroundColor: "#FFFFFF",
+              marginTop: 15,
             },
           ]}
         >
-          Cancel
-        </Text>
-      </TouchableOpacity>
+          <Text
+            style={[
+              styles.textSign,
+              {
+                color: "#009387",
+              },
+            ]}
+          >
+            Cancel
+          </Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => handlePress()}
-        style={[
-          styles.signIn,
-          {
-            backgroundColor: "#013d38",
-            marginTop: 15,
-          },
-        ]}
-      >
-        <Text
+        <TouchableOpacity
+          onPress={() => handlePress()}
           style={[
-            styles.textSign,
+            styles.signIn,
             {
-              color: "#FFFFFF",
+              backgroundColor: "#013d38",
+              marginTop: 15,
             },
           ]}
         >
-          Submit
-        </Text>
-      </TouchableOpacity>
+          <Text
+            style={[
+              styles.textSign,
+              {
+                color: "#FFFFFF",
+              },
+            ]}
+          >
+            Submit
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -157,9 +160,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 5,
     paddingBottom: 10,
-    width: '90%',
-    height: '90%',
-    resizeMode: 'contain'
+    width: "90%",
+    height: "90%",
+    resizeMode: "contain",
   },
   header2: {
     flex: 1,
@@ -180,7 +183,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 30,
     alignSelf: "center",
-    marginBottom: 30
+    marginBottom: 30,
   },
   text_footer: {
     color: "#05375a",
@@ -200,7 +203,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#009387",
-    color: 'white',
+    color: "white",
     height: 35,
     marginBottom: 20,
   },

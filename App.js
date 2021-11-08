@@ -9,7 +9,7 @@ import Login from './screens/login'
 import  CoordinatorSignup from './screens/coordinatorSignup'
 import  VolunteerSignup from './screens/volunteerSignup'
 import CreateTask from './screens/createTask'
-import TaskList from './screens/tasksSummary'
+import CoordinatorTasks from './screens/coordinatorTasks'
 
 const AppStack = createStackNavigator();
 export default function Navigator(){
@@ -20,7 +20,7 @@ export default function Navigator(){
     <AppStack.Screen name="Home" component={Home} />
     <AppStack.Screen name="Login" component={Login} />
     <AppStack.Screen name="CreateTask" component={CreateTask} />
-    <AppStack.Screen name="TaskList" component={TaskList} />
+    <AppStack.Screen name="CoordinatorTasks" component={CoordinatorTasks} />
     <AppStack.Screen name="CoordinatorSignup" component={CoordinatorSignup} />
     <AppStack.Screen name="VolunteerSignup" component={VolunteerSignup} />
     </AppStack.Navigator>
