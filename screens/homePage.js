@@ -44,10 +44,10 @@ export default function homePage() {
           <Text style={styles.text_header}>Helping Hand</Text>
 
           <View style={styles.button}>
-            <Text style={styles.text_MidSize}>Select a Role to Register</Text>
+          
 
             <TouchableOpacity
-              onPress={() => navigateToVolunteerRegister()}
+              onPress={() => navigateToLogin()}
               style={[
                 styles.signIn,
                 {
@@ -64,29 +64,7 @@ export default function homePage() {
                   },
                 ]}
               >
-                Volunteer
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              onPress={() => navigateToCoordinatorRegister()}
-              style={[
-                styles.signIn,
-                {
-                  backgroundColor: "#FFFFFF",
-                  marginTop: 15,
-                },
-              ]}
-            >
-              <Text
-                style={[
-                  styles.textSign,
-                  {
-                    color: "#009387",
-                  },
-                ]}
-              >
-                Coordinator
+                Login
               </Text>
             </TouchableOpacity>
 
